@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Colin McNally Portfolio</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+    html {
+      scrollbar-width: thin; /* For Firefox */
+      scrollbar-color: #7280c9 #222a5d; /* Thumb and track colors for Firefox */
+
+    }
+
+    /* Webkit-based Browsers (Chrome, Edge, Safari) */
+    html::-webkit-scrollbar {
+      width: 12px; /* Width of the scrollbar */
+    }
+
+    html::-webkit-scrollbar-track {
+      background: linear-gradient(180deg, transparent, transparent); /* Background of the scrollbar track */
+    }
+
+    html::-webkit-scrollbar-thumb {
+      background: linear-gradient(180deg, transparent, transparent); /* Scrollbar thumb color */
+      border-radius: 6px; /* Rounded corners for the scrollbar thumb */
+    }
+
+    html::-webkit-scrollbar-thumb:hover {
+      background: linear-gradient(180deg, #222a5d, #222a5d); /* Darker color on hover */
+    }
+    </style>
+</head>
+
+<body>
+    <script src = "main.js"></script>
+
+
+    <section class="banner">
+        <div class="navbar">
+          <img src = "logo.png" class="logo" alt="logo">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+            </ul>
+        </div>
+
+    <div class="content">
+        <h1>COLIN MCNALLY</h1>
+        <h2>PORTFOLIO</h2>
+        <div>
+        <button type="button" onclick="scrollToSection()"><span></span>LEARN MORE</button>
+        </div>
+        <script>
+            function scrollToSection() {
+               document.getElementById('about').scrollIntoView({
+                behavior: 'smooth',
+                block: 'start'
+               });
+            }
+        </script>
+    </div>
+    </section>
+
+    <section id="about" class="about">
+        <h1>About Me</h1>
+        <br>
+        <img src = "myself.jpg" class="myself" alt="image_of_myself">
+        <p>An ambitious sophomore Computer Science student,<br> with 4+ years of experience in developing mobile and web applications. <br> My portfolio contains a couple key projects that display not just programming knowledge,<br> but also math as well as design. </p>
+
+    </section>
+
+    <section class="projects">
+        <h1>My Projects</h1>
+
+        <div class="p-row">
+            <div class="projects-col">
+                <button type="button" onclick="window.open('https://github.com/cjmcnally/Depriminus')"> <img src="minusLogo.png" alt="Depress-Minus">
+                    <div class="layer">
+                    <h3>Depress-Minus</h3>
+                    </div>
+            </div>
+            <div class="projects-col">
+                <button type="button" onclick="window.open('https://github.com/cjmcnally/Linear-Image-Transformation')"> <img src="imageTrans.jpg" alt="Image Transformation">
+                    <div class="layer">
+                    <h3>Image Transformation</h3>
+                    </div>
+            </div>
+            <div class="projects-col">
+                <button type="button" onclick="window.open('https://github.com/cjmcnally/orbitAnimation')"> <img src="orbitAnimation.png" alt="Orbit Animation">
+                    <div class="layer">
+                    <h3>Orbit Animation</h3>
+                    </div>
+            </div>
+    </div>
+    <footer></footer>
+
+    </section>
+
+</body>
+</html>
