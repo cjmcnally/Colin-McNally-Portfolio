@@ -77,10 +77,17 @@
         <div class="p-row">
             <div class="projects-col">
                 <!-- <button type="button" onclick="window.open('https://github.com/cjmcnally/Depriminus')"> <img src="minusLogo.png" alt="Depress-Minus"> -->
-                  <button type="button" onclick="location.href='depressMinusProject.html'"> <img src="minusLogo.png" alt="Depress-Minus">
+                  <button type="button" onclick="scrollToP1()"> <img src="minusLogo.png" alt="Depress-Minus">
                     <div class="layer">
                     <h3>Depress-Minus</h3>
                     </div>
+                    <script>
+                      function scrollToP1() {
+                        document.getElementById('p1').scrollIntoView({
+                          behaviour: 'smooth', block: 'start'
+                        });
+                      }
+                    </script>
             </div>
             <div class="projects-col">
                 <button type="button" onclick="window.open('https://github.com/cjmcnally/Linear-Image-Transformation')"> <img src="imageTrans.jpg" alt="Image Transformation">
@@ -95,9 +102,48 @@
                     </div>
             </div>
     </div>
-    <footer></footer>
-
     </section>
+
+    <section id="p1" class="p1">
+      <div class="p1-content">
+        <h1>Depress-Minus Mobile Application</h1>
+        <br>
+        <p>Depress-Minus is a mental health app which offers a personalized approach,<br> some features include a journaling function and a daily wellness check.
+            <br>Whether you need an encouraging boost or seek professional therapeutic help,<br> my app provides a safe and supportive space.
+            <br>Mainly used Dart, C++, SQL, and HTML. <br>As well as Flutter for the package, and Android Studio for the android emulator.
+            <br>
+            Homepage Includes:
+            <br>- Wellness Check
+            <br>- Motivational Tips or advice
+            <br>- Personalized approach</p>
+      </div>
+
+      <div class="video">
+        <iframe
+            width="275" 
+            height="550" 
+            src="https://www.youtube.com/embed/KbVeFTjgjI0" 
+            title="Mood Tracker Feature" 
+            frameborder="0" 
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+            allowfullscreen>
+        </iframe>
+      </div>
+
+      <div class="video2">
+        <iframe
+            width="275" 
+            height="550" 
+            src="https://www.youtube.com/embed/pQOEToDdOuY" 
+            title="Journaling Feature" 
+            frameborder="0" 
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+            allowfullscreen>
+        </iframe>
+      </div>
+    </section>
+
+    <footer></footer>
 
 </body>
 </html>
