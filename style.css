@@ -18,12 +18,29 @@
 
 .navbar {
     width: 85%;
+    position: sticky;
     margin: auto;
     align-items: center;
     display: flex;
     justify-content: space-between;
+    padding: 20px;
     z-index: 3;
-  }
+}
+
+/* .p1 section {
+  padding: 40px 20px;
+  margin: 0;
+}
+
+.p2 section {
+  padding: 40px 20px;
+  margin: 0;
+}
+
+.p3 section {
+  padding: 40px 20px;
+  margin: 0;
+} */
   
 .logo{
     width: 120px;
@@ -138,6 +155,8 @@
 
   .about p {
     color: #fff;
+    max-width: 550px;
+    margin: 0 auto;
     font-size: 20px;
     font-weight: 300;
     line-height: 22px;
@@ -300,7 +319,9 @@
     position: absolute;
     /* top: 25%; */
     transform: translateY(-50%);
+    padding-top: 150px;
     text-align: center;
+    align-content: center;
     color: #fff;
   }
 
@@ -310,26 +331,105 @@
   }
 
   .video {
-    width: 100%;
+    width: auto;
     position: absolute;
     /* top: 50%; */
     transform: translateY(-50%);
     text-align: left;
     padding-left: 120px;
-    padding-top: 150px;
+    padding-top: 250px;
     color: #222a5d;
+    z-index: 60;
+    pointer-events: auto;
   }
 
   .video2 {
-    width: 100%;
+    width: auto;
     position: absolute;
     /* top: 50%; */
     transform: translateY(-50%);
     text-align: right;
     right: 120px;
-    padding-top: 150px;
+    padding-top: 250px;
     color: #222a5d;
+    z-index: 60;
+    pointer-events: auto;
   }
+
+  .p2 {
+    display: grid; /* Use CSS Grid */
+    grid-template-columns: 1fr auto; /* Two equal columns */
+    align-items: center; /* Align items vertically */
+    width: 100%;
+    height: 100vh;
+    margin: auto;
+    padding-top: 0px;
+    padding-left: 120px;
+    padding-right: 20px;
+    background-color: #222a5d;
+    position: relative;
+}
+
+.p2-content {
+    grid-column: 1; /* Place in the first column */
+    padding: 0 20px; /* Add some padding */
+    color: #fff;
+    max-width: 550px;
+}
+
+.p2-content h1 {
+    font-size: 40px;
+    /* margin-top: 80px; */
+}
+
+.p2-content p {
+    margin-right: 0px; /* Add some space between text and image */
+}
+
+.p2-image {
+    grid-column: 2; /* Place in the second column */
+    max-width: 700px; /* Adjust as needed */
+    height: auto;
+    display: block;
+    margin-left: 20px; /* Push the image to the right */
+    padding-right: 200px;
+}
+
+.p3 {
+  display: grid; /* Use CSS Grid */
+  grid-template-columns: auto 1ft; /* Two columns: text takes available space, video takes auto width */
+  align-items: center; /* Align items vertically */
+  width: 100%;
+  height: 100vh;
+  margin: auto;
+  padding-top: 150px;
+  background-color: #222a5d;
+  position: relative;
+}
+
+.p3-content {
+  grid-column: 2; /* Place in the first column */
+  max-width: 500px;
+  padding: 0 20px; /* Add some padding */
+  text-align: left; /* Align text to the right */
+  color: #fff;
+}
+
+.p3-content h1 {
+  font-size: 40px;
+  /* margin-top: 80px; */
+}
+
+.p3-video {
+  grid-column: 1; /* Place in the second column */
+  max-width: 700px; /* Adjust as needed */
+  height: auto;
+  display: block;
+  margin-left: 20px; /* Add margin to the left */
+  padding-left: 120px; /* Add padding to the right */
+  z-index: 30;
+  pointer-events: auto;
+}
 
   footer {
     background: #222a5d;
@@ -337,6 +437,24 @@
     height: auto;
     width: 100%;
     padding-top: 30px;
+  }
+
+  @media (max-width: 768px) {
+    .content h1 {
+      font-size: 2.5em;
+    }
+
+    .content h2 {
+      font-size: 1.5em;
+    }
+
+    .navbar ul {
+      flex-direction: column;
+    }
+
+    .navbar ul li {
+      margin: 10px 0;
+    }
   }
 
   /* button{

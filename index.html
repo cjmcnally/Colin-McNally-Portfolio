@@ -40,10 +40,9 @@
 
     <section class="banner">
         <div class="navbar">
-          <img src = "logo.png" class="logo" alt="logo">
-            <ul>
-                <li><a href="index.html">Home</a></li>
-            </ul>
+          <a href="index.html">
+            <img src = "logo.png" class="logo" alt="logo">
+          </a>
         </div>
 
     <div class="content">
@@ -67,7 +66,7 @@
         <h1>About Me</h1>
         <br>
         <img src = "myself.jpg" class="myself" alt="image_of_myself">
-        <p>An ambitious sophomore Computer Science student,<br> with 4+ years of experience in developing mobile and web applications. <br> My portfolio contains a couple key projects that display not just programming knowledge,<br> but also math as well as design. </p>
+        <p>An ambitious sophomore Computer Science student,<br> with 4+ years of experience in developing mobile and web applications. <br><br> My portfolio contains a couple key projects that display not just programming knowledge,<br> but also math, and design. </p>
 
     </section>
 
@@ -90,16 +89,30 @@
                     </script>
             </div>
             <div class="projects-col">
-                <button type="button" onclick="window.open('https://github.com/cjmcnally/Linear-Image-Transformation')"> <img src="imageTrans.jpg" alt="Image Transformation">
+                <button type="button" onclick="scrollToP2()"> <img src="imageTrans.jpg" alt="Image Transformation">
                     <div class="layer">
                     <h3>Image Transformation</h3>
                     </div>
+                    <script>
+                      function scrollToP2() {
+                        document.getElementById('p2').scrollIntoView({
+                          behaviour: 'smooth', block: 'start'
+                        });
+                      }
+                    </script>
             </div>
             <div class="projects-col">
-                <button type="button" onclick="window.open('https://github.com/cjmcnally/orbitAnimation')"> <img src="orbitAnimation.png" alt="Orbit Animation">
+                <button type="button" onclick="scrollToP3()"> <img src="orbitAnimation.png" alt="Orbit Animation">
                     <div class="layer">
                     <h3>Orbit Animation</h3>
                     </div>
+                    <script>
+                      function scrollToP3() {
+                        document.getElementById('p3').scrollIntoView({
+                          behaviour: 'smooth', block: 'start'
+                        });
+                      }
+                    </script>
             </div>
     </div>
     </section>
@@ -109,13 +122,19 @@
         <h1>Depress-Minus Mobile Application</h1>
         <br>
         <p>Depress-Minus is a mental health app which offers a personalized approach,<br> some features include a journaling function and a daily wellness check.
-            <br>Whether you need an encouraging boost or seek professional therapeutic help,<br> my app provides a safe and supportive space.
-            <br>Mainly used Dart, C++, SQL, and HTML. <br>As well as Flutter for the package, and Android Studio for the android emulator.
+            <br><br>Whether you need an encouraging boost or seek professional therapeutic help,<br> my app provides a safe and supportive space.
+            <br><br>Developed using Dart, C++, SQL, and HTML. <br><br>As well as Flutter for the package, and Android Studio for the android emulator.
+            <br><br>
+            Features Include:
             <br>
-            Homepage Includes:
-            <br>- Wellness Check
-            <br>- Motivational Tips or advice
-            <br>- Personalized approach</p>
+            <ul>
+              <li>- Wellness Check</li>
+              <li>- Motivational Tips & Advice</li>
+              <li>- Journaling Function</li>
+              <li>- Personalized Approach</li>
+            </ul>
+
+          </p>
       </div>
 
       <div class="video">
@@ -141,6 +160,59 @@
             allowfullscreen>
         </iframe>
       </div>
+    </section>
+
+    <section id="p2"class="p2">
+      <div class="p2-content">
+        <h1>Image Transformation</h1>
+        <br>
+        <p>My Image Transformation project required knowledge of Linear Algebra & Python <br><br>
+          I first had to solve an identity matrix by hand, and with every transformation I would solve it by hand as well.
+          <br><br>Then I would use Python to solve the same transformation, and compare the results.
+          <br><br>Transformations Include:
+            <br>
+            <ul>
+              <li>- Scaling</li>
+              <li>- Reflection</li>
+              <li>- Rotation</li>
+              <li>- Inverse</li>
+              <li>- Composite</li>
+            </ul>
+        </p>
+      </div>
+      <img src="transformations.png" class="p2-image" alt="image transformation">
+    
+    </section>
+
+    <section id="p3" class="p3">
+      <div class="p3-video">
+        <iframe
+            width="720" 
+            height="540" 
+            src="https://youtube.com/embed/U2EhkFc_Na4?si=DhFDXXXyQpRHPMeZ" 
+            title="Orbit Animation" 
+            frameborder="0" 
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+            allowfullscreen>
+        </iframe>
+      </div>
+      <div class="p3-content">
+        <h1>Orbit Animation</h1>
+        <br>
+        <p>My Orbit Animation project required knowledge of HTML, CSS, and JavaScript <br><br>
+          I first had to create a simple orbit animation, then I added a few more planets to the mix.
+          <br><br>Finally, I added a few more features such as a sun, and a moon.
+          <br><br>Objects Include:
+            <br>
+            <ul>
+              <li>- Sun</li>
+              <li>- Moon</li>
+              <li>- Planets</li>
+              <li>- Orbit Animation</li>
+            </ul>
+        </p>
+      </div>
+      
     </section>
 
     <footer></footer>
